@@ -2,9 +2,8 @@ import React from 'react';
 import Feature from './Feature'
 
 function FeaturesList(props) {
-    let features;
-    if (props.features) {
-        features = Object.keys(props.features)
+    render(){
+        const features = Object.keys(props.features)
             .map(category => {
                 const options = props.features[category].map((item, index) => {
                     const selectedClass = item.name === props.selected[category].name ? 'feature__selected' : '';
